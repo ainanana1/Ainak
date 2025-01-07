@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<title> artbyainak </title>
+</html>
+<style>
+    body {
+      background-image: white;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    </style>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<html>
+<head>
+<style>
+  h1 {
+    font-size: 40px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+        
+     
+  p {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+</style>
+</head>
+</html>
+
+<!-- Header -->
+<div class="header" id="myHeader">
+  <h1>ART by AINA K</h1>
+  <p>Here is few of my artwork.</p>
+  <p>[Click on the buttons to change the grid view]</p>
+  <button class="btn" onclick="one()">1</button>
+  <button class="btn active" onclick="two()">2</button>
+  <button class="btn" onclick="four()">3</button>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="o1.JPG" style="width:100%">
+    <img src="o2.JPG" style="width:100%">
+    <img src="o3.jpg" style="width:100%">
+    <img src="o4.jpg" style="width:100%">
+    <img src="o5.JPG" style="width:100%">
+    <img src="p1.jpg" style="width:100%">
+    <img src="p2.jpg" style="width:100%">
+    <img src="p3.jpg" style="width:100%">
+    <img src="p4.jpg" style="width:100%">
+    <img src="p5.jpg" style="width:100%">
+    <img src="p6.jpg" style="width:100%">
+    <img src="p7.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="o6.JPG" style="width:100%">
+    <img src="o7.JPG" style="width:100%">
+    <img src="o8.JPG" style="width:100%">
+    <img src="o9.JPG" style="width:100%">
+    <img src="o10.JPG" style="width:100%">
+    <img src="p8.jpg" style="width:100%">
+    <img src="p9.jpg" style="width:100%">
+    <img src="p10.jpg" style="width:100%">
+    <img src="p11.jpg" style="width:100%">
+    <img src="p12.jpg" style="width:100%">
+    <img src="p13.jpg" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="o1.JPG" style="width:100%">
+    <img src="o2.JPG" style="width:100%">
+    <img src="o3.jpg" style="width:100%">
+    <img src="o4.jpg" style="width:100%">
+    <img src="o5.JPG" style="width:100%">
+    <img src="p1.jpg" style="width:100%">
+    <img src="p2.jpg" style="width:100%">
+    <img src="p3.jpg" style="width:100%">
+    <img src="p4.jpg" style="width:100%">
+    <img src="p5.jpg" style="width:100%">
+    <img src="p6.jpg" style="width:100%">
+    <img src="p7.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="o6.JPG" style="width:100%">
+    <img src="o7.JPG" style="width:100%">
+    <img src="o8.JPG" style="width:100%">
+    <img src="o9.JPG" style="width:100%">
+    <img src="o10.JPG" style="width:100%">
+    <img src="p8.jpg" style="width:100%">
+    <img src="p9.jpg" style="width:100%">
+    <img src="p10.jpg" style="width:100%">
+    <img src="p11.jpg" style="width:100%">
+    <img src="p12.jpg" style="width:100%">
+    <img src="p13.jpg" style="width:100%">
+  </div>
+</div>
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  // IE10
+    elements[i].style.flex = "25%";
+  }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
+
+<center><p><i>&copy Aina Kamizon 2025</i></p></center>
